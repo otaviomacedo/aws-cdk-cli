@@ -37,7 +37,7 @@ export class LargePrChecker extends Component {
     this.workflow.on({
       pullRequest: { 
         branches: ['main'],
-        types: ['labeled'],
+        types: ['labeled', 'edited', 'opened', 'reopened'],
       },
     });
 

@@ -7,6 +7,9 @@ on:
       - main
     types:
       - labeled
+      - edited
+      - opened
+      - reopened
 jobs:
   check:
     name: Check PR size
