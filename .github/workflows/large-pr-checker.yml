@@ -10,6 +10,7 @@ on:
       - edited
       - opened
       - reopened
+      - unlabeled
 jobs:
   check:
     name: Check PR size
