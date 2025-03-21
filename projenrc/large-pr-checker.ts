@@ -35,7 +35,10 @@ export class LargePrChecker extends Component {
 
     this.workflow = repo.github.addWorkflow('large-pr-checker');
     this.workflow.on({
-      pullRequest: { branches: ['main'] },
+      pullRequestTarget: { 
+        branches: ['main'],
+        types: ['labeled'],
+      },
     });
 
     this.workflow.addJob('check', {

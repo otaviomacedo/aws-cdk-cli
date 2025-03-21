@@ -2,9 +2,11 @@
 
 name: large-pr-checker
 on:
-  pull_request:
+  pull_request_target:
     branches:
       - main
+    types:
+      - labeled
 jobs:
   check:
     name: Check PR size
